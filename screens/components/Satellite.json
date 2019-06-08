@@ -1,0 +1,30 @@
+{
+status: true,
+data: [
+		{
+		"record_id": "1",
+		"year": "2002",
+		"image": "https://datalocal.info/mkulima/assets/image/spatial/NakuruTown_Urbanization_2002.png"
+		},
+		{
+		"record_id": "2",
+		"year": "2007",
+		"image": "https://datalocal.info/mkulima/includes/stories/image/shosho-nyokabi.png"
+		},
+		{
+		"record_id": "3",
+		"year": "2012",
+		"image": "https://img.youtube.com/vi/A4BdiV8h6U0/mqdefault.jpg"
+		},
+		{
+		"record_id": "4",
+		"year": "2017",
+		"image": "https://img.youtube.com/vi/nbUxN_P0HTY/mqdefault.jpg"
+		},
+		{
+		"record_id": "5",
+		"year": "2019",
+		"image": "https://img.youtube.com/vi/p96fLSBNFYE/mqdefault.jpg"
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "MyLingo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "react": "16.8.3",
+    "react-background-slideshow": "^1.0.4",
+    "react-native": "0.59.8",
+    "react-native-app-intro-slider": "^2.0.1",
+    "react-native-elements": "^1.1.0",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-image-grid": "^1.0.0",
+    "react-native-image-slider-box": "^1.0.2",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-navigation": "^2.18.5",
+    "react-native-snap-carousel": "^3.8.0",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-swiper": "^1.5.14",
+    "react-native-vector-icons": "^6.4.2",
+    "react-navigation": "^3.9.1"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/runtime": "7.4.4",
+    "babel-jest": "24.8.0",
+    "jest": "24.8.0",
+    "metro-react-native-babel-preset": "0.54.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
