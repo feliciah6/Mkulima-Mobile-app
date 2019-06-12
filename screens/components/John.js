@@ -5,23 +5,8 @@ import {WebView, AppRegistry, Image } from 'react-native';
 
  	   static navigationOptions = {
    
-      headerTitle: (
-      <Image
-      resizeMode='cover' 
-      style={{
-        width:150,
-        height:76,
-        resizeMode:'contain',
-        alignSelf:'center'
-      }}
-
-
-      source={require("./mkulima-logo.png")}
-      />
-  ),
-
-   
-  };
+     headerLeft: null,
+};
   render() {
     return (
       <WebView

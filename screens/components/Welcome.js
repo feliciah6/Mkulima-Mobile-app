@@ -6,18 +6,34 @@ import { Text, View, StyleSheet, AppRegistry, Image, ScrollView, TouchableOpacit
 //import all the components we are going to use.
 import { Card, Button, Icon  } from 'react-native-elements';
 
-import { createStackNavigator, createDrawerNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import Profile from './Profile';
 import Satelites from './Satelites';
-import Contact from './Contact';
+// import Contact from './Contact';
 import Menu from './Menu';
 import About from './About';
 import Crops from './Crops';
+import Cabbage from './Cabbage';
+import Carrot from './Carrot';
+import Cassava from './Cassava';
+import Red from './Red';
+import Wheat from './Wheat';
+import Tomato from './Tomato';
+import Sweet from './Sweet';
+import Soy from './Soy';
+import Spinach from './Spinach';
+import Sunflower from './Sunflower';
+import Pigeon from './Pigeon';
+import Sorghum from './Sorghum';
+import Pumpkin from './Pumpkin';
+import Potato from './Potato';
+import Millet from './Millet';
+import Onion from './Onion';
+import Cowpea from './Cowpea';
 import Crop from './Crop';
 import Trial from './Trial';
 import Images from './Images';
-import ActionBarImage from './ActionBarImage';
 
 
 //import Card
@@ -139,6 +155,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     color: "#FFF",
+    fontFamily: "Montserrat-Medium",
     fontWeight: "700",
     paddingTop:10
   },
@@ -153,7 +170,7 @@ const styles = StyleSheet.create({
   paragraph: {
     margin: 24,
     fontSize: 18,
-    fontFamily: "montserrat.regular",
+    fontFamily: "Montserrat-Medium",
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#34495e',
@@ -161,22 +178,66 @@ const styles = StyleSheet.create({
 });
 
 const RootStack = createStackNavigator ({
-  Welcome: { screen: Welcome },
-  Satelites: { screen: Satelites },
-  Menu: { screen: Menu },
+  Welcome: { screen: Welcome},
+  Satelites: { screen: Satelites, 
+  navigationOptions : {
+    header : null,
+  },
+},
+  Menu: { screen: Menu, 
+  navigationOptions : {
+      headerTitle: (
+      <Image
+      resizeMode='cover' 
+      style={{
+        width:150,
+        height:76,
+        resizeMode:'contain',
+        alignSelf:'center'
+      }}
+
+
+      source={require("./mkulima-logo.png")}
+      />
+  ),
+  
+  },},
+
   About: { screen: About },
   Crops: { screen: Crops },
+  Cabbage: { screen: Cabbage },
+  Carrot: { screen: Carrot },
   Crop: { screen: Crop },
-  ActionBarImage: { screen: ActionBarImage },
+  Cowpea: { screen: Cowpea },
   Trial: { screen: Trial },
+  Millet: { screen: Millet },
+  Onion: { screen: Onion },
+  Pigeon: { screen: Pigeon },
+  Cassava: { screen: Cassava },
+  Potato: { screen: Potato },
+  Spinach: { screen: Spinach },
+  Soy: { screen: Soy },
+  Wheat: { screen: Wheat },
+  Tomato: { screen: Tomato },
+  Pumpkin: { screen: Pumpkin },
+  Red: { screen: Red },
+  Sunflower: { screen: Sunflower },
+  Sorghum: { screen: Sorghum },
   Images: { screen: Images },
-  Contact: { screen: Contact },
-  Profile: { screen: Profile }
+  Sweet: { screen: Sweet },
+  // Contact: { screen: Contact,
+  // navigationOptions :{
+  //   header:null,
+  // }, },
+  Profile: { screen: Profile, 
+  navigationOptions : {
+    header : null,
+  },}
 });
 
 const App = createAppContainer(RootStack);
 
 export default App;
 
-// AppRegistry.registerComponent("Welcome", () => Welcome);
+
 

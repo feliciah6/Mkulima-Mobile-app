@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {WebView, AppRegistry, Image } from 'react-native';
 
- export default class Janet extends Component {
+ export default class Beans extends Component {
  	   static navigationOptions = {
      
       headerTitle: (
@@ -23,11 +23,11 @@ import {WebView, AppRegistry, Image } from 'react-native';
   render() {
     return (
       <WebView
-        source={{uri: 'https://datalocal.info/mkulima/index.php?pg=stories&op=data&tk=0.441190806071023&bw_farming%5B%5D=crop&bw_gender%5B%5D=Female&bw_age%5B%5D=61_plus&bw_practice%5B%5D=for%20profit'}}
+        source={{uri: 'https://datalocal.info/mkulima/index.php?pg=crop-db&comm_id=76'}}
         style={{marginTop: 20}}
       />
     );
   }
 }
 
-AppRegistry.registerComponent('Janet', () => Janet);
+AppRegistry.registerComponent('Beans', () => Beans);

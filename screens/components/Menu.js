@@ -1,16 +1,35 @@
 import React from 'react';  
-import {StyleSheet, Text, AppRegistry, Image, ScrollView, View, ActivityIndicator,  Alert, ImageBackground, TextInput, TouchableOpacity , KeyboardAvoidingView,
+import {StyleSheet, Text, AppRegistry, Image, ScrollView, View, ActivityIndicator, WebView, Alert, ImageBackground, TextInput, TouchableOpacity , KeyboardAvoidingView,
   AsyncStorage} from 'react-native';  
 import { createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';  
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; 
 import { Card, Button  } from 'react-native-elements'; 
 import Profile from './Profile';
 import Satelite from './Satelite';
+import Welcome from './Welcome';
 import Contact from './Contact';
+import Sweet from './Sweet';
 import Menu from './Menu';
 import Janet from './Janet';
 import John from './John';
+import Beans from './Beans';
+import Pigeon from './Pigeon';
+import Potato from './Potato';
+import Sorghum from './Sorghum';
+import Pumpkin from './Pumpkin';
+import Wheat from './Wheat';
+import Sunflower from './Sunflower';
+import Spinach from './Spinach';
+import Red from './Red';
+import Soy from './Soy';
+import Tomato from './Tomato';
 import Trial from './Trial';
+import Crops from './Crops';
+import Onion from './Onion';
+import Millet from './Millet';
+import Cabbage from './Cabbage';
+import Cowpea from './Cowpea';
+import Carrot from './Carrot';
 import Daniel from './Daniel';
 import Swiper from 'react-native-swiper';
 import { Dropdown } from 'react-native-material-dropdown';
@@ -54,7 +73,7 @@ class HomeScreen extends React.Component {
 
   render() {  
     return (  
-      <View style={styles.container}>  
+      // <View style={styles.container}>  
       <ScrollView>
       <View style={styles.container1}>
         <Card title="Welcome Spotlight on Nakuru">
@@ -101,10 +120,44 @@ class HomeScreen extends React.Component {
       </View>
       </View>
       </ScrollView>
-      </View>  
+      // </View>  
     );  
   }  
 } 
+// commodities screens
+
+
+//  class Beans extends React.Component  {
+//      static navigationOptions = {
+     
+//       headerTitle: (
+//       <Image
+//       resizeMode='cover' 
+//       style={{
+//         width:150,
+//         height:76,
+//         resizeMode:'contain',
+//         alignSelf:'center'
+//       }}
+
+
+//       source={require("./mkulima-logo.png")}
+//       />
+//   ),
+   
+//   };
+//   render() {
+//     return (
+//       <WebView
+//         source={{uri: 'https://datalocal.info/mkulima/index.php?pg=crop-db&comm_id=76'}}
+//         style={{marginTop: 20}}
+//       />
+//     );
+//   }
+// }
+
+
+
 
 
 
@@ -137,77 +190,143 @@ class CommoditiesDataScreen extends React.Component {
 
    
   };
-onContactPress() {
-this.props.navigation.navigate('Data'); 
-}
+
+  CommodityScreenPress = () => {
+  this.props.navigation.navigate('Crops');
+  };
+
+  CommodityScreen2Press = () => {
+  this.props.navigation.navigate('Cabbage');
+  };
+
+  CommodityScreen3Press = () => {
+  this.props.navigation.navigate('Carrot');
+  };
+
+  CommodityScreen4Press = () => {
+  this.props.navigation.navigate('Cassava');
+  };
+
+  CommodityScreen5Press = () => {
+  this.props.navigation.navigate('Cowpea');
+  };
+
+  CommodityScreen6Press = () => {
+  this.props.navigation.navigate('Millet');
+  };
+
+  CommodityScreen7Press = () => {
+  this.props.navigation.navigate('Onion');
+  };
+  CommodityScreen8Press = () => {
+  this.props.navigation.navigate('Pigeon');
+  };
+  CommodityScreen9Press = () => {
+  this.props.navigation.navigate('Potato');
+  };
+  CommodityScreen10Press = () => {
+  this.props.navigation.navigate('Sorghum');
+  };
+  CommodityScreen11Press = () => {
+  this.props.navigation.navigate('Pumpkin');
+  };
+  CommodityScreen12Press = () => {
+  this.props.navigation.navigate('Red');
+  };
+  CommodityScreen13Press = () => {
+  this.props.navigation.navigate('Sunflower');
+  };
+  CommodityScreen14Press = () => {
+  this.props.navigation.navigate('Spinach');
+  };
+  CommodityScreen15Press = () => {
+  this.props.navigation.navigate('Soy');
+  };
+  CommodityScreen16Press = () => {
+  this.props.navigation.navigate('Sweet');
+  };
+  CommodityScreen17Press = () => {
+  this.props.navigation.navigate('Wheat');
+  };
+  CommodityScreen18Press = () => {
+  this.props.navigation.navigate('Tomato');
+  };
+
  
-  render() {  
+  render() { 
     return (  
-        <View style={styles.container}> 
+        // <View style={styles.container}> 
 
     <ScrollView>
     <View style={styles.maincontainer}>
     <Text style = {styles.text7}>Commodities Data</Text>
     <CardSection>
-    <TouchableOpacity onPress={() => Linking.openURL('https://datalocal.info/mkulima/api/crops_get.php?comm_id=82')}>
+    <TouchableOpacity onPress={() => this.CommodityScreenPress()}>
         <Image
           style={{width: 80, height: 40 }}
-          source={require("./crop1.jpg")} 
+          source={require("./crop1.jpg")}
+          resizeMode="contain" 
         />
         <Text>Bean</Text>
     </TouchableOpacity>
   </CardSection>
   <CardSection>
-   <TouchableOpacity onPress={() => Actions.workerDetails()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen2Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./crop2.jpg")} 
+          source={require("./crop2.jpg")}
+          resizeMode="contain" 
         />
     <Text>Cabbage</Text>
    </TouchableOpacity>
   </CardSection>
   <CardSection>
-   <TouchableOpacity onPress={() => this.onContactPress()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen3Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./crop3.jpg")} 
+          source={require("./crop3.jpg")}
+          resizeMode="contain" 
         />
         <Text>Carrot</Text>
    </TouchableOpacity>
   </CardSection>
   <CardSection>
-   <TouchableOpacity onPress={() => Actions.compltpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen4Press()}>
      <Image
           style={{width: 80, height: 40 }}
-          source={require("./crop4.jpg")} 
+          source={require("./crop4.jpg")}
+          resizeMode="contain" 
         />
         <Text>Cassava</Text>
    </TouchableOpacity>
   </CardSection>
   <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen5Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./crop5.jpg")} 
+          source={require("./crop5.jpg")}
+          resizeMode="contain" 
         />
         <Text>Cowpea</Text>
    </TouchableOpacity>
   </CardSection>
    <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen6Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./crop6.jpg")} 
+          source={require("./crop6.jpg")}
+          resizeMode="contain" 
         />
         <Text>Millet</Text>
    </TouchableOpacity>
   </CardSection>
 
    <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen7Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./onion.jpg")} 
+          source={require("./onion.jpg")}
+          resizeMode="contain" 
         />
 
     <Text>onions</Text>
@@ -215,20 +334,22 @@ this.props.navigation.navigate('Data');
   </CardSection>
 
    <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen8Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./pigeon.jpg")} 
+          source={require("./pigeon.jpg")}
+          resizeMode="contain" 
         />
         <Text>pigeon-pea</Text>
    </TouchableOpacity>
   </CardSection>
 
    <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen9Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./potato.jpg")} 
+          source={require("./potato.jpg")}
+          resizeMode="contain" 
         />
 
         <Text>Potato</Text>
@@ -236,10 +357,11 @@ this.props.navigation.navigate('Data');
   </CardSection>
 
   <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen10Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./sorghum.jpg")} 
+          source={require("./sorghum.jpg")}
+          resizeMode="contain" 
         />
 
         <Text>sorghum</Text>
@@ -247,10 +369,11 @@ this.props.navigation.navigate('Data');
   </CardSection>
 
   <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen11Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./redgram.jpg")} 
+          source={require("./redgram.jpg")}
+          resizeMode="contain" 
         />
         <Text>Pumpkin</Text>
 
@@ -258,20 +381,22 @@ this.props.navigation.navigate('Data');
   </CardSection>
 
   <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen12Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./pumpkin.jpg")} 
+          source={require("./pumpkin.jpg")}
+          resizeMode="contain" 
         />
         <Text>Red-gram</Text>
    </TouchableOpacity>
   </CardSection>
 
     <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen13Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./redgram.jpg")} 
+          source={require("./redgram.jpg")}
+          resizeMode="contain" 
         />
         <Text>sunflower</Text>
 
@@ -279,10 +404,11 @@ this.props.navigation.navigate('Data');
   </CardSection>
 
     <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen14Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./redgram.jpg")} 
+          source={require("./redgram.jpg")}
+          resizeMode="contain" 
         />
         <Text>spinach</Text>
 
@@ -290,10 +416,11 @@ this.props.navigation.navigate('Data');
   </CardSection>
 
     <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen15Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./redgram.jpg")} 
+          source={require("./redgram.jpg")}
+          resizeMode="contain" 
         />
         <Text>soybean</Text>
 
@@ -302,10 +429,11 @@ this.props.navigation.navigate('Data');
 
 
    <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen16Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./sweet-potato.jpg")} 
+          source={require("./sweet-potato.jpg")}
+          resizeMode="contain" 
         />
         <Text>sweet-potato</Text>
    </TouchableOpacity>
@@ -313,12 +441,24 @@ this.props.navigation.navigate('Data');
 
 
    <CardSection>
-   <TouchableOpacity onPress={() => Actions.userpage()}>
+   <TouchableOpacity onPress={() => this.CommodityScreen17Press()}>
     <Image
           style={{width: 80, height: 40 }}
-          source={require("./wheat.jpg")} 
+          source={require("./wheat.jpg")}
+          resizeMode="contain" 
         />
         <Text>wheat</Text>
+   </TouchableOpacity>
+  </CardSection>
+
+   <CardSection>
+   <TouchableOpacity onPress={() => this.CommodityScreen18Press()}>
+    <Image
+          style={{width: 80, height: 40 }}
+          source={require("./tomato.jpg")}
+          resizeMode="contain" 
+        />
+        <Text>Tomato</Text>
    </TouchableOpacity>
   </CardSection>
 
@@ -332,7 +472,7 @@ this.props.navigation.navigate('Data');
 
       </ScrollView> 
       
-        </View>  
+        // </View>  
     );  
   }  
 } 
@@ -643,7 +783,7 @@ class AboutScreen extends React.Component {
   };
   render() {  
     return (  
-        <View style={styles.container}>  
+        // <View style={styles.container}>  
       <ScrollView>
       <View behavior="padding" style={styles.container3}>
       <Image style={styles.logo} source={require("./mkulima-logo.png")} />
@@ -659,7 +799,7 @@ class AboutScreen extends React.Component {
        
         </View>
     </ScrollView>  
-        </View>  
+        // </View>  
     );  
   }  
 }
@@ -725,21 +865,22 @@ async onContactPress() {
      }
     );
      if (response.status >= 200 && response.status < 300) {
-        alert("Posted successfully!!!");
+        Alert.alert("Posted successfully!!!");
      }
    } catch (errors) {
 
      alert(errors);
     } 
    
-    this.props.navigation.navigate(''); 
+    this.props.navigation.navigate('Welcome'); 
   }
+
 
 
 
   render() {  
     return (  
-        <View style={styles.container}>  
+        // <View style={styles.container}>  
       <ScrollView>
       <View style={styles.container4}>
         <View style={styles.logoContainer}>
@@ -797,6 +938,7 @@ async onContactPress() {
             </View>
 
 
+
           <View style={styles.window}>
           <TextInput
             value={this.state.message}
@@ -833,7 +975,7 @@ async onContactPress() {
    
       </View>
       </ScrollView>
-        </View>  
+        // </View>  
     );  
   }  
 }
@@ -903,15 +1045,8 @@ const TabNavigator = createBottomTabNavigator(
     },  
     {  
       initialRouteName: "Home",
-      headerLayoutPreset : 'center',
-      defaultNavigationOptions : {
-        headerTitle:<Image resizeMode="cover"  style={{ width: 150, height: 76 }} source={require("./mkulima-logo.png")} />,
-        
-      }
-
-
-
-    }); 
+    
+}); 
 
 const CardSection = (props) =>{
     return(
@@ -949,6 +1084,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     color: "#FFF",
+    fontFamily: "Montserrat-Medium",
     fontWeight: "700",
     paddingTop:10
   },
@@ -977,12 +1113,11 @@ const styles = StyleSheet.create({
     margin: 24,
     fontSize: 18,
     fontWeight: 'bold',
+    fontFamily: "Montserrat-Medium",
     textAlign: 'center',
     color: '#34495e',
   },
 
-  wrapper: {
-  },
   slide1: {
     flex: 1,
     justifyContent: 'center',
@@ -1005,6 +1140,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     color: "#FFF",
+    fontFamily: "Montserrat-Medium",
     fontWeight: "700",
     paddingTop:10
   },
@@ -1035,12 +1171,14 @@ const styles = StyleSheet.create({
     fontSize:18,
     paddingTop:10,
     fontWeight: 'bold',
+    fontFamily: "Montserrat-Medium",
 
   },
   text4: {
     color: '#000',
     fontSize:30,
     fontWeight: 'bold',
+    fontFamily: "Montserrat-Medium",
     
   }, 
 
@@ -1053,14 +1191,14 @@ container3: {
  
   },
 
-  container4: {
-    flex: 1,
-    // justifyContent: "flex-start",
-    alignItems: "center",
+  // container4: {
+  //   flex: 1,
+  //   // justifyContent: "flex-start",
+  //   alignItems: "center",
     
     
  
-  },
+  // },
   logo: {
     width: 350,
     height: 200
@@ -1069,7 +1207,7 @@ container3: {
  text3: {
     fontSize: 30,
     alignSelf: "center",
-    fontFamily: "montserrat.regular",
+    fontFamily: "Montserrat-Medium",
     textAlign: "center",
     color: "#000000",
     fontWeight: "bold"
@@ -1078,7 +1216,7 @@ container3: {
    text1: {
     fontSize: 25,
     alignSelf: "flex-start",
-    fontFamily: "montserrat.regular",
+    fontFamily: "Montserrat-Medium",
     textAlign: "left",
     color: "#000000",
     fontWeight: "bold",
@@ -1086,27 +1224,21 @@ container3: {
     
   },
     text2: {
-    fontSize: 17,
-    alignSelf: "flex-start",
-    fontFamily: "montserrat.regular",
+    fontSize: 15,
+    alignSelf: "center",
+    fontFamily: "Montserrat-Medium",
     textAlign: "left",
     color: "#000000",
-    fontWeight: "normal",
+    fontWeight: "light",
     paddingTop: 10
     
   },
 
-  // logoContainer: {
-  //   alignItems: "center",
-  //   flexGrow: 1,
-  //   justifyContent: "center",
-  //   alignItems: "center"
-  // },
    MainContainer: {
    flex: 1,
    justifyContent: 'center',
-   
-  marginBottom: 15,
+   marginBottom: 15,
+   // padding:10,
   backgroundColor: "#ffffff"
    
  },
@@ -1119,6 +1251,7 @@ container3: {
     alignSelf: "center",
     textAlign: "center",
     color: "#000000",
+    fontFamily: "Montserrat-Medium",
     fontWeight: "400"
     
   },
@@ -1155,7 +1288,7 @@ container3: {
   keyboard: {
     margin: 5,
     padding: 5,
-    // alignSelf: "stretch",
+ 
    
   },
   buttonText: {
@@ -1175,6 +1308,7 @@ container3: {
     width: 160,
     textAlign: "center",
     fontSize: 35,
+    fontFamily: "Montserrat-Medium",
     fontWeight: "bold",
     marginTop: 20
   },
@@ -1224,6 +1358,7 @@ container3: {
 
     text2: {
     fontSize: 17,
+    fontFamily: "Montserrat-Medium",
     alignSelf: "flex-end",
     textAlign: "left",
     color: "#000000",
@@ -1236,10 +1371,90 @@ container3: {
 
 const RootStack = createStackNavigator({
   
-  Profile: { screen:Profile },
-  Janet: { screen: Janet },
-  John: { screen: John },
-  Daniel: { screen: Daniel }
+  Profile: { screen:Profile,
+  navigationOptions : {
+    header: null,
+  },},
+  Janet: { screen: Janet , 
+    navigationOptions : {
+      header: null,
+    },},
+  John: { screen: John, 
+  navigationOptions : {
+    header: null,
+  } ,},
+  Daniel: { screen: Daniel,
+  navigationOptions : {
+    header : null,
+  }, },
+  Crops: { screen: Crops, 
+  navigationOptions : {
+    header: null,
+  },},
+  Cabbage: { screen: Cabbage, 
+  navigationOptions : {
+    header: null,
+  },},
+  Carrot: { screen: Carrot, 
+  navigationOptions : {
+    header: null,
+  },},
+  Cowpea: { screen: Cowpea, 
+  navigationOptions : {
+    header: null,
+  },},
+  Millet: { screen: Millet, 
+  navigationOptions : {
+    header: null,
+  },},
+  Onion: { screen: Onion, 
+  navigationOptions : {
+    header: null,
+  },},
+  Pigeon: { screen: Pigeon, 
+  navigationOptions : {
+    header: null,
+  },},
+  Sorghum: { screen: Sorghum, 
+  navigationOptions : {
+    header: null,
+  },},
+  Red: { screen: Red, 
+  navigationOptions : {
+    header: null,
+  },},
+  Sweet: { screen: Sweet, 
+  navigationOptions : {
+    header: null,
+  },},
+  Tomato: { screen: Tomato, 
+  navigationOptions : {
+    header: null,
+  },},
+  Pumpkin: { screen: Pumpkin, 
+  navigationOptions : {
+    header: null,
+  },},
+  Sunflower: { screen: Sunflower, 
+  navigationOptions : {
+    header: null,
+  },},
+  Wheat: { screen: Wheat, 
+  navigationOptions : {
+    header: null,
+  },},
+  Spinach: { screen: Spinach, 
+  navigationOptions : {
+    header: null,
+  },},
+  Soy: { screen: Soy, 
+  navigationOptions : {
+    header: null,
+  },},
+  Potato: { screen: Potato, 
+  navigationOptions : {
+    header: null,
+  },}
 });
 
 const App = createAppContainer(RootStack);

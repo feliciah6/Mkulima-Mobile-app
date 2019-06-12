@@ -16,6 +16,7 @@ import Menu from './screens/components/Menu';
 import Contact from './screens/components/Contact';
 import Splash from './screens/components/Splash';
 import About from './screens/components/About';
+import Beans from './screens/components/Beans';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
 class SplashScreen extends React.Component {
@@ -49,6 +50,8 @@ class SplashScreen extends React.Component {
 
 export default class Home extends Component<{}> {
 
+
+
     constructor(props) {
     super(props);
 
@@ -59,7 +62,7 @@ export default class Home extends Component<{}> {
     return new Promise((resolve) =>
       setTimeout(
         () => { resolve('result') },
-        2000
+        500
       )
     );
   }
@@ -106,7 +109,10 @@ const RootStack = createStackNavigator({
   },
   Profile: {
     screen: Profile,
-    headerLeft: null
+    navigationOptions: {
+      headerLeft: null
+    },
+    
    
     
   },

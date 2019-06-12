@@ -1,60 +1,10 @@
-// import React, {Component} from 'react';
-// import {WebView, AppRegistry, View, ActivityIndicator, Image } from 'react-native';
-
-//  export default  class  Crops extends Component {
-
-//     constructor(props){
-//     super(props);
-//     this.state ={ isLoading: true}
-   
-
-//   }
-//      static navigationOptions = {
-     
-//       headerTitle: (
-//       <Image
-//       resizeMode='cover' 
-//       style={{
-//         width:150,
-//         height:76,
-//         resizeMode:'contain',
-//         alignSelf:'center'
-//       }}
-
-
-//       source={require("./mkulima-logo.png")}
-//       />
-//   ),
-   
-//   };
-//   render() {
-//         if(this.state.isLoading){
-//       return(
-//         <View style={{flex: 1, padding: 20}}>
-//           <ActivityIndicator/>
-//         </View>
-//       )
-//     }
-
-//     return (
-//       <WebView
-//         source={{uri: 'https://datalocal.info/mkulima/index.php?pg=crop-db&comm_id=76'}}
-//         style={{marginTop: 20}}
-//       />
-//     );
-//   }
-// }
-
-// AppRegistry.registerComponent('Crops', () => Crops);
-
-//This is an example code to React Native Show Progress bar While Loading WebView//
 import React, { Component } from 'react';
 //import react in our code.
 
 import { StyleSheet, WebView, AppRegistry, ActivityIndicator, View } from 'react-native';
 //import all the components we are going to use.
 
-export default class Crops extends Component {
+export default class Onion extends Component {
   constructor(props) {
     super(props);
     this.state = { visible: true };
@@ -85,7 +35,7 @@ export default class Crops extends Component {
         <WebView
           style={styles.WebViewStyle}
           //Loading URL
-          source={{ uri: 'https://datalocal.info/mkulima/index.php?pg=crop-db&comm_id=76' }}
+          source={{ uri: 'https://datalocal.info/mkulima/index.php?pg=crop-db&comm_id=41' }}
           //Enable Javascript support
           javaScriptEnabled={true}
           //For the Cache
@@ -122,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Crops', () => Crops);
+AppRegistry.registerComponent('Onion', () => Onion);

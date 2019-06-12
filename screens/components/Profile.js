@@ -96,6 +96,9 @@ class Profile extends Component {
   }
 
      static navigationOptions = {
+
+      title:'profile',
+      headerLeft:null, 
    
       headerTitle: (
       <Image
@@ -115,11 +118,6 @@ class Profile extends Component {
    
   };
 
-  
-
-  _onPressButton() {
-    Alert.alert('You will see the data soon!')
-  }
 
 
    onProfilePress = () => {
@@ -184,10 +182,19 @@ class Profile extends Component {
 
 const RootStack = createStackNavigator({
   
-  Profile: { screen:Profile },
-  Janet: { screen: Janet },
-  John: { screen: John },
-  Daniel: { screen: Daniel }
+  Profile: { screen:Profile}, 
+  Janet: { screen: Janet, 
+  navigationOptions : {
+    header : null,
+  },},
+  John: { screen: John, 
+  navigationOptions : {
+    header : null,
+  },},
+  Daniel: { screen: Daniel, 
+  navigationOptions : {
+    header : null,
+  }, }
 });
 
 const App = createAppContainer(RootStack);
